@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "sample",
+  "version": "1.0.0",
+  "applications": {
+    "gecko": {
+      "id": "sample@itagagaki",
+      "strict_min_version": "68.0"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "experiment_apis": {
+    "WindowListener": {
+      "schema": "api/WindowListener/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["WindowListener"]],
+        "script": "api/WindowListener/implementation.js"
+      }
+    }
+  }  
+}
